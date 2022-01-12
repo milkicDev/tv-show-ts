@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render app 1`] = `
+<div
+  className="actor"
+>
+  <span
+    className="img"
+  >
+    <img
+      alt="Mike Vogel"
+      src="https://static.tvmaze.com/uploads/images/medium_portrait/0/1815.jpg"
+    />
+  </span>
+  <span>
+    Mike Vogel
+  </span>
+  <span>
+    Dale "Barbie" Barbara
+  </span>
+</div>
+`;

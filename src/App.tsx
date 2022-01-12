@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Redirect, Switch, Route, BrowserRouter } from 'react-router-dom';
+import routes from './routes/routes';
+
+import './App.scss';
+import 'font-awesome/css/font-awesome.min.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <BrowserRouter>
+        <header className='App-header header'>
+          <div className='container'>
+            <h1 className='brand'>TV Bland</h1>
+          </div>
+        </header>
+
+        <Switch>
+          {routes.map((route: any) => (
+            <Route
+              key={route.key}
+              path={route.path}
+              exact={route.exact}
+              render={(renderProps: object) => (
+                <route.component {...renderProps} />
+              )}
+            />
+          ))}
+          <Route component={() => <Redirect to={'/show'} />} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,0 +1,85 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.8rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.App {
+  .brand {
+    color: blue;
+  }
+
+  .rating {
+    color: orange;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #ededed;
+  padding: 3.5rem 0 1rem 0;
+
+  h2 {
+    font-size: 24px;
+
+    &.offset-top {
+      margin-top: 5rem;
+    }
+  }
+
+  &.offset-bottom {
+    padding-bottom: 10rem;
+  }
+
+  ~ .container {
+    margin-top: 5rem;
+  }
+
+  ~ .offset--top {
+    margin-top: -7rem;
+  }
+}
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  &.space-between {
+    justify-content: space-between;
+  }
+
+  .w-50 {
+    width: calc(50% - 2rem);
+  }
+}
+
+.tableRow {
+  & > div {
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    align-items: center;
+
+    & > label,
+    & > span,
+    & > div {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render app 1`] = `
+<div>
+  <div
+    className="header offset-bottom"
+  >
+    <div
+      className="container"
+    >
+      <p>
+        TV Show and web series database.
+        <br />
+        Create personalized schedules. Episodes guide, cast, crew and
+        <br />
+         character information.
+      </p>
+      <h2
+        className="offset-top"
+      >
+        Last Added Shows
+      </h2>
+    </div>
+  </div>
+  <div
+    className="container offset--top"
+  >
+    <div
+      className="flex-grid"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,13 @@
+.actor {
+  .img {
+    width: fit-content;
+    margin-right: 2rem;
+
+    img {
+      width: 54px;
+      height: 54px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}
