@@ -1,0 +1,16 @@
+{
+  "brand": "TV-Bland",
+  "home": {
+    "title": "TV Show and web series database.",
+    "description": "Create personalized schedules. Episodes guide, cast, crew and<br /> character information.",
+    "lastAdded": "Last Added Show"
+  },
+  "show": {
+    "showInfo": "Show info",
+    "streamedOn": "Streamed on",
+    "schedule": "Schedule",
+    "status": "Status",
+    "genres": "Genres",
+    "staring": "Starring"
+  }
+}

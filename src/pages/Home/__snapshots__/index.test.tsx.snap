@@ -9,11 +9,15 @@ exports[`render app 1`] = `
       className="container"
     >
       <p>
-        TV Show and web series database.
+        home.title
         <br />
-        Create personalized schedules. Episodes guide, cast, crew and
-        <br />
-         character information.
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "home.description",
+            }
+          }
+        />
       </p>
       <h2
         className="offset-top"

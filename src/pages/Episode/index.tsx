@@ -1,4 +1,5 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 import DOMPurify from 'dompurify';
 import Rating from 'react-rating';
 import { Redirect } from 'react-router-dom';
@@ -10,6 +11,7 @@ import ActorLists from '../../components/ActorsList';
 
 type Props = {
   id: number;
+  t: Function;
 };
 type State = {
   data: Show | object;
@@ -46,6 +48,8 @@ class ShowDetails extends React.Component<Props, State> {
     if (!this.state.loading && !this.state.data.id) {
       return <Redirect to='/shows' />;
     }
+
+    const { t } = this.props;
 
     return (
       <div>
@@ -94,28 +98,30 @@ class ShowDetails extends React.Component<Props, State> {
         <div className='container'>
           <div className='flex-grid space-between'>
             <div className='w-50'>
-              <h2>Show Info</h2>
+              <h2>{t('show.showInfo')}</h2>
               <div className='tableRow'>
-                <div>
-                  <label>Streamed On</label>
-                  <span>{this.state.data.webChannel?.name}</span>
-                </div>
-                <div>
-                  <label>Schedule</label>
-                  <span>{this.state.data.schedule?.days?.join(', ')}</span>
-                </div>
-                <div>
-                  <label>Status</label>
-                  <span>{this.state.data.status}</span>
-                </div>
-                <div>
-                  <label>Genres</label>
-                  <span>{this.state.data.genres?.join(', ')}</span>
-                </div>
+                <React.Fragment>
+                  <div>
+                    <label>{t('show.streamedOn')}</label>
+                    <span>{this.state.data.webChannel?.name}</span>
+                  </div>
+                  <div>
+                    <label>{t('show.schedule')}</label>
+                    <span>{this.state.data.schedule?.days?.join(', ')}</span>
+                  </div>
+                  <div>
+                    <label>{t('show.status')}</label>
+                    <span>{this.state.data.status}</span>
+                  </div>
+                  <div>
+                    <label>{t('show.genres')}</label>
+                    <span>{this.state.data.genres?.join(', ')}</span>
+                  </div>
+                </React.Fragment>
               </div>
             </div>
             <div className='w-50'>
-              <h2>Starring</h2>
+              <h2>{t('show.staring')}</h2>
               <div className='tableRow'>
                 {this.state.cast.map((actor: Actor, iActor: number) => (
                   <ActorLists key={iActor} actor={actor} />
@@ -129,4 +135,4 @@ class ShowDetails extends React.Component<Props, State> {
   }
 }
 
-export default ShowDetails;
+export default withTranslation('common')(ShowDetails);

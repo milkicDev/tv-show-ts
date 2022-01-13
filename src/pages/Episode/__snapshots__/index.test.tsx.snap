@@ -3,23 +3,13 @@
 exports[`render app 1`] = `
 <div>
   <div
-    className="header"
-    style={
-      Object {
-        "maxHeight": "250px",
-      }
-    }
+    className="header show-header"
   >
     <div
       className="container"
     >
       <div
         className="flex-grid"
-        style={
-          Object {
-            "flexWrap": "nowrap",
-          }
-        }
       >
         <div
           className="img-placeholder"
@@ -254,32 +244,32 @@ exports[`render app 1`] = `
         className="w-50"
       >
         <h2>
-          Show Info
+          show.showInfo
         </h2>
         <div
           className="tableRow"
         >
           <div>
             <label>
-              Streamed On
+              show.streamedOn
             </label>
             <span />
           </div>
           <div>
             <label>
-              Schedule
+              show.schedule
             </label>
             <span />
           </div>
           <div>
             <label>
-              Status
+              show.status
             </label>
             <span />
           </div>
           <div>
             <label>
-              Genres
+              show.genres
             </label>
             <span />
           </div>
@@ -289,7 +279,7 @@ exports[`render app 1`] = `
         className="w-50"
       >
         <h2>
-          Starring
+          show.staring
         </h2>
         <div
           className="tableRow"

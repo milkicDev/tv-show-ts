@@ -1,9 +1,12 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 import ShowsApi from '../../api/Shows';
 import ImageCard from '../../components/ImageCard';
 import Schedule from '../../models/Schedule';
 
-type Props = {};
+type Props = {
+  t: Function;
+};
 type State = {
   data: Array<Schedule>,
 };
@@ -22,13 +25,15 @@ class Home extends React.Component<Props, State> {
   }
 
   render() {
+    const { t } = this.props;
+
     return (
       <div>
         <div className='header offset-bottom'>
           <div className='container'>
             <p>
-              TV Show and web series database.<br />
-              Create personalized schedules. Episodes guide, cast, crew and<br /> character information.
+              {t('home.title')}<br />
+              <span dangerouslySetInnerHTML={{__html: t('home.description')}} />
             </p>
 
             <h2 className='offset-top'>Last Added Shows</h2>
@@ -47,4 +52,4 @@ class Home extends React.Component<Props, State> {
   }
 }
 
-export default Home;
+export default withTranslation('common')(Home);
