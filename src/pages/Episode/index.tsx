@@ -49,9 +49,9 @@ class ShowDetails extends React.Component<Props, State> {
 
     return (
       <div>
-        <div className='header' style={{ maxHeight: '250px' }}>
+        <div className='header show-header'>
           <div className='container'>
-            <div className='flex-grid' style={{ flexWrap: 'nowrap' }}>
+            <div className='flex-grid'>
               <div className='img-placeholder'>
                 <img
                   src={this.state.data?.image?.medium}

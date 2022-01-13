@@ -27,11 +27,23 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 90%;
+  }
 }
 
 .header {
   background-color: #ededed;
   padding: 3.5rem 0 1rem 0;
+
+  .show-header {
+    max-height: none;
+
+    @media screen and (min-width: 768px) {
+      max-height: 250px;
+    }
+  }
 
   h2 {
     font-size: 24px;
@@ -50,21 +62,30 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   ~ .offset--top {
-    margin-top: -7rem;
+    margin-top: 0;
   }
 }
 
 .flex-grid {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   gap: 2rem;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+  }
 
   &.space-between {
     justify-content: space-between;
   }
 
   .w-50 {
-    width: calc(50% - 2rem);
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: calc(50% - 2rem);
+    }
   }
 }
 
